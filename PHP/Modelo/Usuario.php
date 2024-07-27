@@ -1,0 +1,52 @@
+<?php
+    namespace PHP\Modelo;
+
+    class Usuario{
+        private string $cpf;
+        private string $nome;
+        private string $endereco;
+        private string $telefone;
+        private string $dtNascimento;
+        private string $login;
+        private string $senha;
+
+        //Construtor
+        public function __construct(string $cpf,
+                                    string $nome,
+                                    string $endereco,
+                                    string $telefone,
+                                    string $dtNascimento,
+                                    string $login,
+                                    string $senha)
+        {
+            $this->cpf = $cpf;
+            $this->nome = $nome;
+            $this->endereco = $endereco;
+            $this->telefone = $telefone;
+            $this->dtNascimento = $dtNascimento;
+            $this->login = $login;
+            $this->senha = $senha;
+        }//Fim do construtor
+
+        public function __get(string $campo)
+        {
+            return $this->campo;
+        }//Fim do get genérico
+
+        public function __set(string $campo, string $valor):void
+        {
+            $this->campo = $valor;
+        }//Fim do set genérico
+
+        public function imprimir():string
+        {
+            return "<br>CPF: " . $this->cpf . 
+                    "<br>Nome: " . $this->nome . 
+                    "<br>Endereço: " . $this->endereco . 
+                    "<br>Telefone: " . $this->telefone . 
+                    "<br>Data de Nascimento: " . $this->dtNascimento . 
+                    "<br>Login: " . $this->login . 
+                    "<br>Senha: " . $this->senha;
+        }//Fim do imprimir
+    }//Fim da classe Usuario
+?>
