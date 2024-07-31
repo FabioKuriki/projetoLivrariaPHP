@@ -48,5 +48,14 @@
                     "<br>Login: " . $this->login . 
                     "<br>Senha: " . $this->senha;
         }//Fim do imprimir
+
+        public function realizarLogin():string{
+            if($this->login == 'fabio' && $this->senha == 123){
+                return "Login Validado";
+            }
+            else{
+                return "Login Invalido";
+            }
+        }//Fim do realizarLogin
     }//Fim da classe Usuario
 ?>

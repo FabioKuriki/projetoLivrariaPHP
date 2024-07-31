@@ -35,5 +35,57 @@
                     "<br>Autor: " . $this->autor . 
                     "<br>Quantidade: " . $this->quantidade;
         }//Fim do imprimir
+
+        public function consultarLivro():string{
+            switch($this->codigo){
+                case 1:
+                    return "<br>Código: " . $this->codigo . 
+                            "<br>Nome: " . "Aventuras nas Estrelas" . 
+                            "<br>Autor: " . "Josepeh Joestar" . 
+                            "<br>Quantidade: " . 5;
+                    break;
+                case 2;
+                    return "<br>Código: " . $this->codigo . 
+                                "<br>Nome: " . "Vingadores" . 
+                                "<br>Autor: " . "Stan Lee" . 
+                                "<br>Quantidade: " . 0;
+                    break;
+                default:
+                    return "O código informado não existe";
+                    break;
+            }
+        }//Fim do consultarLivro
+
+        public function realizarCompra()
+        {
+            switch($this->codigo){
+                case 1:
+                    $this->quantidade = 5;
+                    $this->quantidade -= 1;
+                    return "<br>Compra realizada, " . $this->quantidade . " livros restantes";
+                    break;
+                case 2;
+                    return "<br>Livro indisponível, gostaria de realizar a reserva?";
+                    break;
+                }
+
+        }//Fim do realizarCompra
+
+        public function decisao(string $decisao)
+        {
+            if($this->codigo == 2){
+                switch($decisao){
+                    case "sim":
+                        return "Reserva realizada";
+                        break;
+                    case "não":
+                        return "Tenha um ótimo dia!";
+                        break;
+                    default:
+                        return "Informe sim ou não";
+                        break;
+                }
+            }
+        }//Fim da decisao
     }//Fim da classe Livro
 ?>
