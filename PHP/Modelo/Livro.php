@@ -41,7 +41,7 @@
                 case 1:
                     return "<br>Código: " . $this->codigo . 
                             "<br>Nome: " . "Aventuras nas Estrelas" . 
-                            "<br>Autor: " . "Josepeh Joestar" . 
+                            "<br>Autor: " . "Joseph Joestar" . 
                             "<br>Quantidade: " . 5;
                     break;
                 case 2;

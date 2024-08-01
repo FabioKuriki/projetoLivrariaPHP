@@ -19,14 +19,11 @@
     if($usuario1->realizarLogin() == "Login Validado"){
         echo $livro1->consultarLivro() . "<br>";
         echo $livro1->realizarCompra() . "<br>";
-        echo $livro1->decisao("não") . "<br>";
+        echo $livro1->decisao("sim") . "<br>";
     }
-    
-   
 
     echo "<br>Usuário: <br>" . $usuario1->imprimir() . 
          "<br>--------------------------------------";
-
 
     echo "<br>Livro: <br>" . $livro1->imprimir() . 
         "<br>--------------------------------------";
