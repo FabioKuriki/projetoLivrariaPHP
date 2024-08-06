@@ -9,25 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
-<body style="background-image: url(./Imagens/fundoLivros.jpg)">
+<body>
     <nav class="navbar bg-body-tertiary">
     <div class="container-fluid justify-content-center"><!--precisa centralizar-->
         <span class="navbar-brand mb-0 h1" style="font-weight: bold;">Sistema de Venda de Livro</span>
     </div>
     </nav>
 
-    <div class="card position-absolute top-50 start-50 translate-middle" style="width: 18rem;">
-        <div class="card-body">
-            <h4 class="card-title" style="text-align: center; margin-bottom: 10%;">BEM VINDO</h4>
-            <form>
-                <label>Login</label>
-                <input style="margin-bottom: 10%;" type="text" name="Login"> </input>
-                <label>Senha</label>
-                <input style="margin-bottom: 10%;" type="password" name="senha"> </input>
-                <a href="./livros.php"><button style="margin-bottom: 5%;" class="btn btn-primary" type="button">ENTRAR</button></a>
-            </form>
-            <a href="./cadastro.php" style="text-decoration: none;"><text >Novo por aqui? Cadastre-se</text></a>
-        </div>
-    </div>
 </body>
 </html>

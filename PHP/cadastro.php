@@ -12,7 +12,7 @@
 <body style="background-image: url(./Imagens/fundoLivros.jpg)">
     <nav class="navbar bg-body-tertiary">
     <div class="container-fluid justify-content-center"><!--precisa centralizar-->
-        <span class="navbar-brand mb-0 h1" style="font-weight: bold;">Sistema de Venda de Livro</span>
+        <a href="./login.php"><span class="navbar-brand mb-0 h1" style="font-weight: bold;">Sistema de Venda de Livro</span></a>
     </div>
     </nav>
 

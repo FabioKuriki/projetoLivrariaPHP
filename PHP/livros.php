@@ -9,14 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
-<body>
+<body style="background-color: black">
     <nav class="navbar bg-body-tertiary">
     <div class="container-fluid justify-content-center"><!--precisa centralizar-->
-        <span class="navbar-brand mb-0 h1" style="font-weight: bold;">Sistema de Venda de Livro</span>
+    <a href="./login.php"><span class="navbar-brand mb-0 h1" style="font-weight: bold;">Sistema de Venda de Livro</span></a>
     </div>
     </nav>
+    <br>
 
-    <div class="container-fluid">
+    <div class="container-fluid text-center">
         <div class="row">
             <div class="col"></div>
             <div class="col">
@@ -24,18 +25,18 @@
                     <img src="./Imagens/livro1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Memórias Póstumas de Brás Cubas</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">R$50,00</p>
+                        <a href="./livroEscolhido.php" class="btn btn-primary">COMPRAR</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="./Imagens/livro2.jpg" class="card-img-top" alt="...">
+                    <img sytle="padding-bottom: %" src="./Imagens/livro2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Clássicos Góticos</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">R$55,00</p>
+                        <a href="#" class="btn btn-primary">COMPRAR</a>
                     </div>
                 </div>
             </div>
@@ -44,8 +45,8 @@
                     <img src="./Imagens/livro3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">A Revolução dos Bichos</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">R$20,00</p>
+                        <a href="#" class="btn btn-primary">COMPRAR</a>
                     </div>
                 </div>
             </div>
@@ -58,8 +59,8 @@
                     <img src="./Imagens/livro4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">O menino que tinha medo de ERRRAR</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">R$15,00</p>
+                        <a href="#" class="btn btn-primary">COMPRAR</a>
                     </div>
                 </div>
             </div>
@@ -68,8 +69,8 @@
                     <img src="./Imagens/livro5.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">OBRAS REVOLUCIONÁRIAS</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">R$25,90</p>
+                        <a href="#" class="btn btn-primary">COMPRAR</a>
                     </div>
                 </div>
             </div>
@@ -78,8 +79,8 @@
                     <img src="./Imagens/livro6.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Caminho Suave</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">R$30,00</p>
+                        <a href="#" class="btn btn-primary">COMPRAR</a>
                     </div>
                 </div>
             </div>
