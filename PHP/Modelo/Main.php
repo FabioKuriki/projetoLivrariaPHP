@@ -15,6 +15,10 @@
 
     $reserva1 = new Reserva(1, "546.875.687-45", "28/07/2024", 2, "(11)4646-8965", 1);
 
+    $conexao = new Conexao();
+
+    $conexao->conectar();
+
     echo $usuario1->realizarLogin() . "<br>";
     if($usuario1->realizarLogin() == "Login Validado"){
         echo $livro1->consultarLivro() . "<br>";

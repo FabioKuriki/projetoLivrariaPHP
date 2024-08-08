@@ -1,3 +1,16 @@
+<?php
+    namespace PHP\Modelo;
+
+    require_once('./Modelo/DAO/consultar.php');
+    require_once('./Modelo/DAO/conexao.php');
+
+    use PHP\Modelo\DAO\Consultar;
+    use PHP\Modelo\DAO\Conexao;
+
+    $conexao = new Conexao;
+    $consultar = new Consultar;
+    $textoBotao = "ENTRAR";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,14 +30,30 @@
     </nav>
 
     <div class="card position-absolute top-50 start-50 translate-middle" style="width: 18rem;">
-        <div class="card-body">
-            <h4 class="card-title" style="text-align: center; margin-bottom: 10%;">BEM VINDO</h4>
-            <form>
+        <div class="card-body text-center">
+            <h4 class="card-title" style="margin-bottom: 10%;">BEM VINDO</h4>
+            <form method="POST">
                 <label>Login</label>
-                <input style="margin-bottom: 10%;" type="text" name="Login"> </input>
+                <input style="margin-bottom: 10%;" type="text" name="login"> </input>
                 <label>Senha</label>
                 <input style="margin-bottom: 10%;" type="password" name="senha"> </input>
-                <a href="./livros.php"><button style="margin-bottom: 5%;" class="btn btn-primary" type="button">ENTRAR</button></a>
+                <button style="margin-bottom: 5%;" class="btn btn-primary">
+                    <?php
+                        $login = $_POST['login'];
+                        $senha = $_POST['senha'];
+
+                        if($consultar->realizarLogin($conexao, $login, $senha, "usuario") == true){
+                            header("Location: livros.php"); //Vai para página iniciada
+                            exit();
+                        }
+                        else{
+                            $textoBotao = "Login inválido";
+                        }
+                        
+                        echo $textoBotao;
+                        
+                    ?>
+                </button>   
             </form>
             <a href="./cadastro.php" style="text-decoration: none;"><text >Novo por aqui? Cadastre-se</text></a>
         </div>

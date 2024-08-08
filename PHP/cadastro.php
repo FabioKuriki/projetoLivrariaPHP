@@ -1,3 +1,13 @@
+<?php
+    namespace PHP;
+
+    require_once('./Modelo/DAO/inserir.php');
+    require_once('./Modelo/DAO/conexao.php');
+    use PHP\Modelo\DAO\Inserir;
+    use PHP\Modelo\DAO\Conexao;
+    $inserir = new Inserir();
+    $conexao = new Conexao();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,21 +26,38 @@
     </div>
     </nav>
 
-    <div class="card position-absolute top-50 start-50 translate-middle container-fluid justify-content-center" style="width: 18rem;">
+    <div class="card position-absolute top-50 start-50 translate-middle container-fluid" style="width: 18rem;">
         <div class="card-body ">
             <h4 class="card-title" style="text-align: center; margin-bottom: 10%;">Venha fazer parte!!!</h4>
-            <form>
+            <form class="text-center" method="POST">
+                <label>CPF</label><br>
+                <input style="margin-bottom: 10%;" type="text" name="cpf"> </input><br>
                 <label >Nome</label>
-                <input style="margin-bottom: 10%;" type="text" name="nome"> </input>
+                <input style="margin-bottom: 10%;" type="text" name="nome"> </input><br>
                 <label>Endereço</label>
-                <input style="margin-bottom: 10%;" type="text" name="endereco"> </input>
+                <input style="margin-bottom: 10%;" type="text" name="endereco"> </input><br>
                 <label>Telefone</label>
-                <input style="margin-bottom: 10%;" type="number" name="telefone"> </input>
+                <input style="margin-bottom: 10%;" type="number" name="telefone"> </input><br>
                 <label>Data de Nascimento</label>
-                <input style="margin-bottom: 10%;" type="date" name="dtNascimento"> </input>
+                <input style="margin-bottom: 10%;" type="date" name="dtNascimento"> </input><br>
+                <label>Login</label>
+                <input style="margin-bottom: 10%;" type="text" name="login"> </input><br>
                 <label>Senha</label>
                 <input style="margin-bottom: 10%;" type="password" name="senha"> </input>
-                <button type="button" class="btn btn-primary">Cadastre-se</button>
+                <button class="btn btn-primary">Cadastre-se
+                    <?php
+                        $cpf = $_POST['cpf'];
+                        $nome = $_POST['nome'];
+                        $endereco = $_POST['endereco'];
+                        $telefone = $_POST['telefone'];
+                        $dtNascimento = $_POST['dtNascimento'];
+                        $login = $_POST['login'];
+                        $senha = $_POST['senha'];
+
+                        $inserir->cadastrar($conexao, $cpf, $nome, $endereco,
+                                            $telefone, $login, $senha);
+                    ?>
+                </button>
             </form>
         </div>
     </div>
